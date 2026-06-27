@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSE Code Playground</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Loading Animation -->
+    <div id="loader"><div class="spinner"></div></div>
+
+    <nav>
+        <div class="logo">CSE_IDE</div>
+        <button id="theme-toggle">Switch Theme</button>
+    </nav>
+
+    <div class="container">
+        <div class="editor-section">
+            <textarea id="html-code" placeholder="HTML"></textarea>
+            <textarea id="css-code" placeholder="CSS"></textarea>
+            <textarea id="js-code" placeholder="JavaScript"></textarea>
+        </div>
+        <div class="preview-section">
+            <iframe id="preview"></iframe>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
