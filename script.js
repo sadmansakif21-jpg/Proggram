@@ -1,12 +1,15 @@
-// ট্যাব পরিবর্তন করার ফাংশন
-function openTab(tabId) {
-    const contents = document.querySelectorAll(".tab-content");
-    contents.forEach(c => c.style.display = "none");
-    document.getElementById(tabId).style.display = "block";
+// Tab Switching
+function showTab(id) {
+    document.querySelectorAll('.tab-content').forEach(el => el.style.display = 'none');
+    document.getElementById(id).style.display = 'block';
 }
 
-// নতুন ট্যাবে রান করার ফাংশন
-function runInNewTab() {
+document.getElementById('btn-html').addEventListener('click', () => showTab('html-code'));
+document.getElementById('btn-css').addEventListener('click', () => showTab('css-code'));
+document.getElementById('btn-js').addEventListener('click', () => showTab('js-code'));
+
+// Run Code in New Tab
+document.getElementById('btn-run').addEventListener('click', () => {
     const html = document.getElementById("html-code").value;
     const css = document.getElementById("css-code").value;
     const js = document.getElementById("js-code").value;
@@ -19,9 +22,9 @@ function runInNewTab() {
         </html>
     `);
     newTab.document.close();
-}
+});
 
-// ডার্ক/লাইট মোড টগল
+// Theme Toggle
 document.getElementById("theme-toggle").addEventListener("click", () => {
     document.body.classList.toggle("light-mode");
 });
