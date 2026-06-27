@@ -2,28 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>CSE Code Playground</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSE IDE - Code Compiler</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Loading Animation -->
-    <div id="loader"><div class="spinner"></div></div>
-
     <nav>
         <div class="logo">CSE_IDE</div>
-        <button id="theme-toggle">Switch Theme</button>
+        <button id="theme-toggle">🌓 Mode</button>
     </nav>
 
-    <div class="container">
-        <div class="editor-section">
-            <textarea id="html-code" placeholder="HTML"></textarea>
-            <textarea id="css-code" placeholder="CSS"></textarea>
-            <textarea id="js-code" placeholder="JavaScript"></textarea>
-        </div>
-        <div class="preview-section">
-            <iframe id="preview"></iframe>
-        </div>
+    <div class="tab-menu">
+        <button onclick="openTab('html-code')">HTML</button>
+        <button onclick="openTab('css-code')">CSS</button>
+        <button onclick="openTab('js-code')">JS</button>
+        <button onclick="runInNewTab()" id="run-btn">RUN CODE</button>
     </div>
+
+    <div class="editor-container">
+        <textarea id="html-code" class="tab-content" placeholder="Write HTML here..."></textarea>
+        <textarea id="css-code" class="tab-content" placeholder="Write CSS here..." style="display:none;"></textarea>
+        <textarea id="js-code" class="tab-content" placeholder="Write JS here..." style="display:none;"></textarea>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
