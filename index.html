@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSE IDE - Code Compiler</title>
+    <title>CSE IDE</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,16 +13,16 @@
     </nav>
 
     <div class="tab-menu">
-        <button onclick="openTab('html-code')">HTML</button>
-        <button onclick="openTab('css-code')">CSS</button>
-        <button onclick="openTab('js-code')">JS</button>
-        <button onclick="runInNewTab()" id="run-btn">RUN CODE</button>
+        <button id="btn-html">HTML</button>
+        <button id="btn-css">CSS</button>
+        <button id="btn-js">JS</button>
+        <button id="btn-run" style="background: #238636; color: white;">RUN CODE</button>
     </div>
 
     <div class="editor-container">
-        <textarea id="html-code" class="tab-content" placeholder="Write HTML here..."></textarea>
-        <textarea id="css-code" class="tab-content" placeholder="Write CSS here..." style="display:none;"></textarea>
-        <textarea id="js-code" class="tab-content" placeholder="Write JS here..." style="display:none;"></textarea>
+        <textarea id="html-code" class="tab-content" placeholder="HTML Code here..."></textarea>
+        <textarea id="css-code" class="tab-content" placeholder="CSS Code here..." style="display:none;"></textarea>
+        <textarea id="js-code" class="tab-content" placeholder="JS Code here..." style="display:none;"></textarea>
     </div>
 
     <script src="script.js"></script>
