@@ -1,14 +1,15 @@
-// Tab Switching
+// Tab Switching logic
 function showTab(id) {
     document.querySelectorAll('.tab-content').forEach(el => el.style.display = 'none');
-    document.getElementById(id).style.display = 'block';
+    const target = document.getElementById(id);
+    if (target) target.style.display = 'block';
 }
 
 document.getElementById('btn-html').addEventListener('click', () => showTab('html-code'));
 document.getElementById('btn-css').addEventListener('click', () => showTab('css-code'));
 document.getElementById('btn-js').addEventListener('click', () => showTab('js-code'));
 
-// Run Code in New Tab
+// Run Code logic
 document.getElementById('btn-run').addEventListener('click', () => {
     const html = document.getElementById("html-code").value;
     const css = document.getElementById("css-code").value;
@@ -22,9 +23,4 @@ document.getElementById('btn-run').addEventListener('click', () => {
         </html>
     `);
     newTab.document.close();
-});
-
-// Theme Toggle
-document.getElementById("theme-toggle").addEventListener("click", () => {
-    document.body.classList.toggle("light-mode");
 });
